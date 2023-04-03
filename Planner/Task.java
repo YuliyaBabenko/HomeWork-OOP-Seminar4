@@ -1,6 +1,6 @@
 package Planner;
 
-public class Task {
+public abstract class Task {
     private String description;
     private String prio;
 

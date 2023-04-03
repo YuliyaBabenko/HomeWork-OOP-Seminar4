@@ -1,16 +1,22 @@
 package Planner;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        TaskList<High> myHighs = new TaskList<>(new High("Homework", "high"),
-        new High("Clear the car", "high"), new High("Send a package", "high"));
+        List<High> myHighs = new TaskList<>();
 
-        TaskList<Low> myLows = new TaskList<>(new Low("Bake a cake", "low"),
-        new Low("Call Sarah for a walk", "low"));
+        List<Low> myLows = new TaskList<>();
 
-        TaskList<Middle> myMiddles = new TaskList<>(new Middle("Wash the kitchen", "middle"),
-        new Middle("Clean the carpet", "middle"));
+        List<Middle> myMiddles = new TaskList<>();
+
+        myHighs.add(new High("Homework", "high"));
+        myHighs.add(new High("Clean the car", "high"));
+
 
         DayPlanner.exportTask(myLows);
+
+        DayPlanner.importTask(myHighs);
     }
 }
