@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<High> myHighs = new TaskList<>();
+        TaskList<High> myHighs = new TaskList<>();
 
-        List<Low> myLows = new TaskList<>();
+        TaskList<Low> myLows = new TaskList<>();
 
-        List<Middle> myMiddles = new TaskList<>();
+        TaskList<Middle> myMiddles = new TaskList<>();
 
-        myHighs.add(new High("Homework", "high"));
-        myHighs.add(new High("Clean the car", "high"));
+        myHighs.addTask(new High("Homework", "high"));
+        myHighs.addTask(new High("Clean the car", "high"));
 
 
         DayPlanner.exportTask(myLows);
